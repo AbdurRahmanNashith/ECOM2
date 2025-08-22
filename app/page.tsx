@@ -9,7 +9,7 @@ export default function AdidasHero() {
       <Header />
 
       {/* Hero Section - Added top padding to account for fixed navbar */}
-      <main className="relative pt-24">
+      <main className="relative pt-[104px]">
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[600px]">
           {/* Left Section */}
           <div className="relative bg-black text-white flex flex-col justify-between p-8 lg:p-12">

@@ -38,7 +38,11 @@ export default function Header() {
   }, [lastScrollY])
 
   return (
-    <>
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ease-in-out ${
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       {/* Top Banner */}
       <div className="bg-black text-white text-center py-2 text-sm font-medium">
         <div className="flex items-center justify-center gap-2">
@@ -47,12 +51,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Header with scroll-based visibility */}
-      <header
-        className={`bg-white fixed top-8 left-0 right-0 z-50 border-b border-gray-100 transition-transform duration-300 ease-in-out ${
-          isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        }`}
-      >
+      {/* Header Navigation */}
+      <header className="bg-white border-b border-gray-100 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -243,6 +243,6 @@ export default function Header() {
           </div>
         </div>
       </header>
-    </>
+    </div>
   )
 }
