@@ -13,15 +13,6 @@ export default function AdidasHero() {
         <div className="grid grid-cols-1 lg:grid-cols-3 min-h-[500px] sm:min-h-[600px]">
           {/* Left Section */}
           <div className="relative bg-black text-white flex flex-col justify-between p-6 sm:p-8 lg:p-12 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px]">
-            <div className="absolute top-6 left-6 sm:top-8 sm:left-8 z-20">
-              <h2
-                className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold"
-                style={{ fontFamily: "BRADHI, sans-serif" }}
-              >
-                SHOE STYLE
-              </h2>
-            </div>
-
             <div className="absolute inset-0 bg-black/40 z-10"></div>
             <img
               src="/thoughtful-portrait.png"
