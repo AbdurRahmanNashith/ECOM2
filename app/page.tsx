@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Header from "@/components/header"
 import { Heart } from "lucide-react"
+import { useState, useRef } from "react"
 
 export default function AdidasHero() {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const carouselApiRef = useRef<any>(null)
+
   const products = [
     {
       id: 1,
@@ -180,6 +184,14 @@ export default function AdidasHero() {
                   containScroll: "trimSnaps",
                 }}
                 className="w-full"
+                setApi={(api) => {
+                  carouselApiRef.current = api
+                  if (api) {
+                    api.on("select", () => {
+                      setActiveIndex(api.selectedScrollSnap())
+                    })
+                  }
+                }}
               >
                 <CarouselContent className="gap-4">
                   {products.map((product) => (
@@ -212,7 +224,15 @@ export default function AdidasHero() {
               </Carousel>
             </div>
 
-            <div className="w-1/3 h-1 bg-black mt-8"></div>
+            <div className="relative w-full h-1 mt-8">
+              <div
+                className="absolute h-1 bg-black transition-all duration-300 ease-out"
+                style={{
+                  width: "25%", // Each card takes 1/4 of the width
+                  left: `${activeIndex * 25}%`,
+                }}
+              />
+            </div>
           </div>
 
           {/* What's Hot Section */}

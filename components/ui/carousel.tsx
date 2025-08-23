@@ -223,4 +223,4 @@ const CarouselNext = React.forwardRef<HTMLButtonElement, React.ComponentProps<ty
 )
 CarouselNext.displayName = "CarouselNext"
 
-export { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious }
+export { type CarouselApi, Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, useCarousel }
