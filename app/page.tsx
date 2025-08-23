@@ -1,8 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext } from "@/components/ui/carousel"
 import Header from "@/components/header"
 import { Heart } from "lucide-react"
 
@@ -156,67 +155,61 @@ export default function AdidasHero() {
         <div className="max-w-7xl mx-auto">
           {/* Category Filter */}
           <div className="flex flex-wrap items-center justify-between mb-8 sm:mb-12">
-            <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-0">
-              <button className="bg-black text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-medium">
-                Originals
-              </button>
-              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+            <div className="flex flex-wrap gap-0">
+              <button className="bg-black text-white px-6 py-2 text-sm font-medium">Originals</button>
+              <button className="border border-gray-300 text-black px-6 py-2 text-sm font-medium hover:bg-gray-50">
                 Cricket
               </button>
-              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+              <button className="border border-gray-300 text-black px-6 py-2 text-sm font-medium hover:bg-gray-50">
                 Football
               </button>
-              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+              <button className="border border-gray-300 text-black px-6 py-2 text-sm font-medium hover:bg-gray-50">
                 Training
               </button>
             </div>
-            <button className="text-black font-medium underline text-sm sm:text-base">Shop all</button>
+            <button className="text-black font-medium underline text-sm">Shop all</button>
           </div>
 
           <div className="mb-16">
-            <Carousel
-              opts={{
-                align: "start",
-                loop: false,
-              }}
-              className="w-full"
-            >
-              <CarouselContent className="-ml-2 md:-ml-4">
-                {products.map((product) => (
-                  <CarouselItem
-                    key={product.id}
-                    className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
-                  >
-                    <Card className="border-0 shadow-none">
-                      <CardContent className="p-0">
-                        <div
-                          className="group cursor-pointer"
-                          onClick={() => console.log(`Clicked product ${product.id}`)}
-                        >
-                          <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black aspect-[4/5]">
-                            <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                              <Heart className="w-5 h-5 text-gray-600" />
-                            </button>
-                            <img
-                              src={product.image || "/placeholder.svg"}
-                              alt={product.name}
-                              className="w-full h-full object-contain p-8"
-                            />
-                          </div>
-                          <div className="space-y-1">
-                            <p className="font-semibold text-lg">{product.price}</p>
-                            <h3 className="font-light text-base">{product.name}</h3>
-                            <p className="text-gray-600 text-sm font-light">{product.category}</p>
-                          </div>
+            <div className="relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: false,
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="gap-4">
+                  {products.slice(0, 4).map((product, index) => (
+                    <CarouselItem key={product.id} className="basis-1/4 min-w-0">
+                      <div
+                        className={`group cursor-pointer ${index === 1 ? "border-2 border-black" : ""}`}
+                        onClick={() => console.log(`Clicked product ${product.id}`)}
+                      >
+                        <div className="relative bg-gray-100 overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black aspect-[4/5]">
+                          <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                            <Heart className="w-5 h-5 text-gray-600" />
+                          </button>
+                          <img
+                            src={product.image || "/placeholder.svg"}
+                            alt={product.name}
+                            className="w-full h-full object-contain p-8"
+                          />
                         </div>
-                      </CardContent>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="bg-white shadow-lg hover:bg-gray-50" />
-              <CarouselNext className="bg-white shadow-lg hover:bg-gray-50" />
-            </Carousel>
+                        <div className="space-y-1 px-2">
+                          <p className="font-bold text-sm">{product.price}</p>
+                          <h3 className="font-light text-sm">{product.name}</h3>
+                          <p className="text-gray-500 text-xs font-light">{product.category}</p>
+                        </div>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 w-12 h-12" />
+              </Carousel>
+            </div>
+
+            <div className="w-1/3 h-1 bg-black mt-8"></div>
           </div>
 
           {/* What's Hot Section */}
