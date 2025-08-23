@@ -2,9 +2,73 @@
 
 import { Button } from "@/components/ui/button"
 import Header from "@/components/header"
-import { Heart } from "lucide-react"
+import { Heart, ChevronLeft, ChevronRight } from "lucide-react"
+import { useState } from "react"
 
 export default function AdidasHero() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  const products = [
+    {
+      id: 1,
+      image: "/black-and-white-adidas-superstar.png",
+      price: "₹11 999.00",
+      name: "Superstar II Shoes",
+      category: "Originals",
+    },
+    {
+      id: 2,
+      image: "/all-black-adidas-superstar.png",
+      price: "₹9 999.00",
+      name: "Superstar II Shoes",
+      category: "Originals",
+    },
+    {
+      id: 3,
+      image: "/beige-tan-superstar.png",
+      price: "₹11 999.00",
+      name: "Superstar II Shoes",
+      category: "Originals",
+    },
+    {
+      id: 4,
+      image: "/purple-adidas-superstar.png",
+      price: "₹11 999.00",
+      name: "Superstar II Shoes",
+      category: "Originals",
+    },
+    {
+      id: 5,
+      image: "/white-adidas-superstar-side.png",
+      price: "₹12 999.00",
+      name: "Superstar Classic",
+      category: "Originals",
+    },
+    {
+      id: 6,
+      image: "/black-and-white-adidas-superstar.png",
+      price: "₹10 999.00",
+      name: "Superstar Retro",
+      category: "Originals",
+    },
+    {
+      id: 7,
+      image: "/all-black-adidas-superstar.png",
+      price: "₹13 999.00",
+      name: "Superstar Premium",
+      category: "Originals",
+    },
+    { id: 8, image: "/beige-tan-superstar.png", price: "₹11 499.00", name: "Superstar Limited", category: "Originals" },
+  ]
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % Math.max(1, products.length - 3))
+  }
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + Math.max(1, products.length - 3)) % Math.max(1, products.length - 3))
+  }
+
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
       <Header />
@@ -91,7 +155,6 @@ export default function AdidasHero() {
         </div>
       </main>
 
-      {/* Product Showcase Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           {/* Category Filter */}
@@ -113,81 +176,53 @@ export default function AdidasHero() {
             <button className="text-black font-medium underline text-sm sm:text-base">Shop all</button>
           </div>
 
-          {/* Product Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
-            {/* Product 1 */}
-            <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square leading-9">
-                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-                <img
-                  src="/black-and-white-adidas-superstar.png"
-                  alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-8"
-                />
-              </div>
-              <div className="space-y-1">
-                <p className="font-bold text-lg">₹11 999.00</p>
-                <h3 className="font-medium text-base">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-sm">Originals</p>
-              </div>
-            </div>
+          <div className="relative mb-16">
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
+              style={{ marginLeft: "-20px" }}
+            >
+              <ChevronLeft className="w-6 h-6 text-gray-600" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
+              style={{ marginRight: "-20px" }}
+            >
+              <ChevronRight className="w-6 h-6 text-gray-600" />
+            </button>
 
-            {/* Product 2 */}
-            <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
-                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-                <img
-                  src="/all-black-adidas-superstar.png"
-                  alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-8"
-                />
-              </div>
-              <div className="space-y-1">
-                <p className="font-bold text-lg">₹9 999.00</p>
-                <h3 className="font-medium text-base">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-sm">Originals</p>
-              </div>
-            </div>
-
-            {/* Product 3 */}
-            <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
-                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-                <img
-                  src="/beige-tan-superstar.png"
-                  alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-8"
-                />
-              </div>
-              <div className="space-y-1">
-                <p className="font-bold text-lg">₹11 999.00</p>
-                <h3 className="font-medium text-base">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-sm">Originals</p>
-              </div>
-            </div>
-
-            {/* Product 4 */}
-            <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
-                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                  <Heart className="w-5 h-5 text-gray-600" />
-                </button>
-                <img
-                  src="/purple-adidas-superstar.png"
-                  alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-8"
-                />
-              </div>
-              <div className="space-y-1">
-                <p className="font-bold text-lg">₹11 999.00</p>
-                <h3 className="font-medium text-base">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-sm">Originals</p>
+            {/* Product Grid */}
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-300 ease-in-out gap-6 sm:gap-8"
+                style={{ transform: `translateX(-${currentSlide * (100 / 4)}%)` }}
+              >
+                {products.slice(currentSlide, currentSlide + 4).map((product) => (
+                  <div key={product.id} className="flex-none w-full sm:w-1/2 lg:w-1/4">
+                    <div className="group cursor-pointer" onClick={() => console.log(`Clicked product ${product.id}`)}>
+                      <div
+                        className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black"
+                        style={{ aspectRatio: "1/1.2" }}
+                      >
+                        <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                          <Heart className="w-5 h-5 text-gray-600" />
+                        </button>
+                        <img
+                          src={product.image || "/placeholder.svg"}
+                          alt={product.name}
+                          className="w-full h-full object-contain p-8"
+                        />
+                      </div>
+                      <div className="space-y-1">
+                        <p className="font-semibold text-lg">{product.price}</p>
+                        <h3 className="font-light text-base">{product.name}</h3>
+                        <p className="text-gray-600 text-sm font-light">{product.category}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
