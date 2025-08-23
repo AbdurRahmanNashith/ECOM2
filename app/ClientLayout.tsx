@@ -21,6 +21,12 @@ export default function ClientLayout({
             font-weight: normal;
             font-style: normal;
           }
+          @font-face {
+            font-family: 'ITC Avant Garde Gothic';
+            src: url('/fonts/ITC-Avant-Garde-Gothic-LT-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+          }
         `}</style>
       </head>
       <body className={inter.className}>{children}</body>

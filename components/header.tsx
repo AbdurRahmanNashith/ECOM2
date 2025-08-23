@@ -59,7 +59,7 @@ export default function Header() {
             {/* Logo */}
             <div className="flex-shrink-0">
               <h1
-                className="text-black text-lg font-extrabold leading-5 sm:text-xs"
+                className="text-black text-lg font-extrabold leading-5 sm:text-xl"
                 style={{ fontFamily: "BRADHI, sans-serif" }}
               >
                 SHOE STYLE
