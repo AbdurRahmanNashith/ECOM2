@@ -524,11 +524,14 @@ export default function AdidasHero() {
       <section className="bg-black text-white py-8 sm:py-12">
         <div className="text-center">
           <h2
-            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black mb-8 tracking-tight"
+            className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-black mb-2 tracking-tight"
             style={{ fontFamily: "BRADHI, sans-serif" }}
           >
             SHOE STYLE
           </h2>
+          <p className="text-sm sm:text-base text-gray-300" style={{ fontFamily: "Calibri, sans-serif" }}>
+            Since 1997
+          </p>
         </div>
       </section>
 
