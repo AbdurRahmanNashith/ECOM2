@@ -1,13 +1,12 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Header from "@/components/header"
-import { Heart, ChevronLeft, ChevronRight } from "lucide-react"
-import { useState } from "react"
+import { Heart } from "lucide-react"
 
 export default function AdidasHero() {
-  const [currentSlide, setCurrentSlide] = useState(0)
-
   const products = [
     {
       id: 1,
@@ -58,16 +57,14 @@ export default function AdidasHero() {
       name: "Superstar Premium",
       category: "Originals",
     },
-    { id: 8, image: "/beige-tan-superstar.png", price: "₹11 499.00", name: "Superstar Limited", category: "Originals" },
+    {
+      id: 8,
+      image: "/beige-tan-superstar.png",
+      price: "₹11 499.00",
+      name: "Superstar Limited",
+      category: "Originals",
+    },
   ]
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % Math.max(1, products.length - 3))
-  }
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + Math.max(1, products.length - 3)) % Math.max(1, products.length - 3))
-  }
 
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
@@ -176,55 +173,50 @@ export default function AdidasHero() {
             <button className="text-black font-medium underline text-sm sm:text-base">Shop all</button>
           </div>
 
-          <div className="relative mb-16">
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
-              style={{ marginLeft: "-20px" }}
+          <div className="mb-16">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: false,
+              }}
+              className="w-full"
             >
-              <ChevronLeft className="w-6 h-6 text-gray-600" />
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white shadow-lg rounded-full p-2 hover:bg-gray-50 transition-colors"
-              style={{ marginRight: "-20px" }}
-            >
-              <ChevronRight className="w-6 h-6 text-gray-600" />
-            </button>
-
-            {/* Product Grid */}
-            <div className="overflow-hidden">
-              <div
-                className="flex transition-transform duration-300 ease-in-out gap-6 sm:gap-8"
-                style={{ transform: `translateX(-${currentSlide * (100 / 4)}%)` }}
-              >
-                {products.slice(currentSlide, currentSlide + 4).map((product) => (
-                  <div key={product.id} className="flex-none w-full sm:w-1/2 lg:w-1/4">
-                    <div className="group cursor-pointer" onClick={() => console.log(`Clicked product ${product.id}`)}>
-                      <div
-                        className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black"
-                        style={{ aspectRatio: "1/1.2" }}
-                      >
-                        <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
-                          <Heart className="w-5 h-5 text-gray-600" />
-                        </button>
-                        <img
-                          src={product.image || "/placeholder.svg"}
-                          alt={product.name}
-                          className="w-full h-full object-contain p-8"
-                        />
-                      </div>
-                      <div className="space-y-1">
-                        <p className="font-semibold text-lg">{product.price}</p>
-                        <h3 className="font-light text-base">{product.name}</h3>
-                        <p className="text-gray-600 text-sm font-light">{product.category}</p>
-                      </div>
-                    </div>
-                  </div>
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {products.map((product) => (
+                  <CarouselItem
+                    key={product.id}
+                    className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+                  >
+                    <Card className="border-0 shadow-none">
+                      <CardContent className="p-0">
+                        <div
+                          className="group cursor-pointer"
+                          onClick={() => console.log(`Clicked product ${product.id}`)}
+                        >
+                          <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black aspect-[4/5]">
+                            <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                              <Heart className="w-5 h-5 text-gray-600" />
+                            </button>
+                            <img
+                              src={product.image || "/placeholder.svg"}
+                              alt={product.name}
+                              className="w-full h-full object-contain p-8"
+                            />
+                          </div>
+                          <div className="space-y-1">
+                            <p className="font-semibold text-lg">{product.price}</p>
+                            <h3 className="font-light text-base">{product.name}</h3>
+                            <p className="text-gray-600 text-sm font-light">{product.category}</p>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </CarouselItem>
                 ))}
-              </div>
-            </div>
+              </CarouselContent>
+              <CarouselPrevious className="bg-white shadow-lg hover:bg-gray-50" />
+              <CarouselNext className="bg-white shadow-lg hover:bg-gray-50" />
+            </Carousel>
           </div>
 
           {/* What's Hot Section */}
