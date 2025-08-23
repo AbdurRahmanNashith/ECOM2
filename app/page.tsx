@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import Header from "@/components/header"
+import { Heart } from "lucide-react"
 
 export default function AdidasHero() {
   return (
@@ -89,6 +90,128 @@ export default function AdidasHero() {
           </h1>
         </div>
       </main>
+
+      {/* Product Showcase Section */}
+      <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          {/* Category Filter */}
+          <div className="flex flex-wrap items-center justify-between mb-8 sm:mb-12">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-0">
+              <button className="bg-black text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-medium">
+                Originals
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+                Cricket
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+                Football
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
+                Training
+              </button>
+            </div>
+            <button className="text-black font-medium underline text-sm sm:text-base">Shop all</button>
+          </div>
+
+          {/* Product Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
+            {/* Product 1 */}
+            <div className="group">
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
+                <img
+                  src="/black-and-white-adidas-superstar.png"
+                  alt="Superstar II Shoes"
+                  className="w-full h-full object-contain p-8"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
+              </div>
+            </div>
+
+            {/* Product 2 */}
+            <div className="group">
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
+                <img
+                  src="/all-black-adidas-superstar.png"
+                  alt="Superstar II Shoes"
+                  className="w-full h-full object-contain p-8"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹9 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
+              </div>
+            </div>
+
+            {/* Product 3 */}
+            <div className="group">
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
+                <img
+                  src="/beige-tan-superstar.png"
+                  alt="Superstar II Shoes"
+                  className="w-full h-full object-contain p-8"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
+              </div>
+            </div>
+
+            {/* Product 4 */}
+            <div className="group">
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
+                <img
+                  src="/purple-adidas-superstar.png"
+                  alt="Superstar II Shoes"
+                  className="w-full h-full object-contain p-8"
+                />
+              </div>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
+              </div>
+            </div>
+          </div>
+
+          {/* What's Hot Section */}
+          <div className="border-t border-gray-200 pt-12 sm:pt-16">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-8 sm:mb-12 tracking-tight">WHAT'S HOT?</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              <div className="aspect-square bg-black rounded-lg overflow-hidden">
+                <img src="/urban-adidas-style.png" alt="What's Hot 1" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
+                <img src="/adidas-lifestyle.png" alt="What's Hot 2" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
+                <img src="/adidas-street-style.png" alt="What's Hot 3" className="w-full h-full object-cover" />
+              </div>
+              <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+                <img src="/adidas-lifestyle-portrait.png" alt="What's Hot 4" className="w-full h-full object-cover" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
