@@ -314,6 +314,73 @@ export default function AdidasHero() {
               </div>
             </div>
           </div>
+
+          {/* Sports Category Section */}
+          <div className="pt-12 sm:pt-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-8 sm:mb-12 tracking-tight text-center">
+              PICK YOUR LOOK, FIND YOUR FIT, AND WALK WITH CONFIDENCE!
+            </h2>
+
+            <div className="relative">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: false,
+                  dragFree: true,
+                  containScroll: "trimSnaps",
+                }}
+                className="w-full"
+              >
+                <CarouselContent className="gap-4">
+                  <CarouselItem className="basis-1/5 min-w-0">
+                    <div className="group cursor-pointer">
+                      <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-4">
+                        <img src="/cricket-player-blue-jersey.png" alt="Cricket" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-lg font-bold text-center border-b-2 border-black pb-1">CRICKET</h3>
+                    </div>
+                  </CarouselItem>
+
+                  <CarouselItem className="basis-1/5 min-w-0">
+                    <div className="group cursor-pointer">
+                      <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-4">
+                        <img src="/athletic-runner.png" alt="Running" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-lg font-bold text-center border-b-2 border-black pb-1">RUNNING</h3>
+                    </div>
+                  </CarouselItem>
+
+                  <CarouselItem className="basis-1/5 min-w-0">
+                    <div className="group cursor-pointer">
+                      <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-4">
+                        <img src="/fitness-training.png" alt="Training" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-lg font-bold text-center border-b-2 border-black pb-1">TRAINING</h3>
+                    </div>
+                  </CarouselItem>
+
+                  <CarouselItem className="basis-1/5 min-w-0">
+                    <div className="group cursor-pointer">
+                      <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-4">
+                        <img src="/soccer-player-white-jersey.png" alt="Football" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-lg font-bold text-center border-b-2 border-black pb-1">FOOTBALL</h3>
+                    </div>
+                  </CarouselItem>
+
+                  <CarouselItem className="basis-1/5 min-w-0">
+                    <div className="group cursor-pointer">
+                      <div className="aspect-[4/5] bg-gray-100 overflow-hidden mb-4">
+                        <img src="/basketball-player-athletic-wear.png" alt="Basketball" className="w-full h-full object-cover" />
+                      </div>
+                      <h3 className="text-lg font-bold text-center border-b-2 border-black pb-1">BASKETBALL</h3>
+                    </div>
+                  </CarouselItem>
+                </CarouselContent>
+                <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 w-12 h-12" />
+              </Carousel>
+            </div>
+          </div>
         </div>
       </section>
     </div>
