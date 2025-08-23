@@ -97,124 +97,97 @@ export default function AdidasHero() {
           {/* Category Filter */}
           <div className="flex flex-wrap items-center justify-between mb-8 sm:mb-12">
             <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-0">
-              <Button className="bg-black text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-800">
+              <button className="bg-black text-white px-4 sm:px-6 py-2 text-sm sm:text-base font-medium">
                 Originals
-              </Button>
-              <Button
-                variant="outline"
-                className="border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50 bg-transparent"
-              >
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
                 Cricket
-              </Button>
-              <Button
-                variant="outline"
-                className="border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50 bg-transparent"
-              >
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
                 Football
-              </Button>
-              <Button
-                variant="outline"
-                className="border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50 bg-transparent"
-              >
+              </button>
+              <button className="border border-gray-300 text-black px-4 sm:px-6 py-2 text-sm sm:text-base font-medium hover:bg-gray-50">
                 Training
-              </Button>
+              </button>
             </div>
-            <Button variant="link" className="text-black font-medium underline text-sm sm:text-base p-0">
-              Shop all
-            </Button>
+            <button className="text-black font-medium underline text-sm sm:text-base">Shop all</button>
           </div>
 
           {/* Product Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 sm:gap-10 lg:gap-12 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-16">
             {/* Product 1 */}
             <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-6 aspect-square">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute top-4 right-4 z-10 hover:bg-white/20 rounded-full"
-                >
-                  <Heart className="w-6 h-6 text-gray-600" />
-                </Button>
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square leading-9">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
                 <img
                   src="/black-and-white-adidas-superstar.png"
                   alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-12"
+                  className="w-full h-full object-contain p-8"
                 />
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-xl">₹11 999.00</p>
-                <h3 className="font-medium text-lg">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-base">Originals</p>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
               </div>
             </div>
 
             {/* Product 2 */}
             <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-6 aspect-square">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute top-4 right-4 z-10 hover:bg-white/20 rounded-full"
-                >
-                  <Heart className="w-6 h-6 text-gray-600" />
-                </Button>
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
                 <img
                   src="/all-black-adidas-superstar.png"
                   alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-12"
+                  className="w-full h-full object-contain p-8"
                 />
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-xl">₹9 999.00</p>
-                <h3 className="font-medium text-lg">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-base">Originals</p>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹9 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
               </div>
             </div>
 
             {/* Product 3 */}
             <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-6 aspect-square">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute top-4 right-4 z-10 hover:bg-white/20 rounded-full"
-                >
-                  <Heart className="w-6 h-6 text-gray-600" />
-                </Button>
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
                 <img
                   src="/beige-tan-superstar.png"
                   alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-12"
+                  className="w-full h-full object-contain p-8"
                 />
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-xl">₹11 999.00</p>
-                <h3 className="font-medium text-lg">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-base">Originals</p>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
               </div>
             </div>
 
             {/* Product 4 */}
             <div className="group">
-              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-6 aspect-square">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="absolute top-4 right-4 z-10 hover:bg-white/20 rounded-full"
-                >
-                  <Heart className="w-6 h-6 text-gray-600" />
-                </Button>
+              <div className="relative bg-gray-100 rounded-lg overflow-hidden mb-4 aspect-square">
+                <button className="absolute top-4 right-4 z-10 p-2 hover:bg-white/20 rounded-full transition-colors">
+                  <Heart className="w-5 h-5 text-gray-600" />
+                </button>
                 <img
                   src="/purple-adidas-superstar.png"
                   alt="Superstar II Shoes"
-                  className="w-full h-full object-contain p-12"
+                  className="w-full h-full object-contain p-8"
                 />
               </div>
-              <div className="space-y-2">
-                <p className="font-bold text-xl">₹11 999.00</p>
-                <h3 className="font-medium text-lg">Superstar II Shoes</h3>
-                <p className="text-gray-600 text-base">Originals</p>
+              <div className="space-y-1">
+                <p className="font-bold text-lg">₹11 999.00</p>
+                <h3 className="font-medium text-base">Superstar II Shoes</h3>
+                <p className="text-gray-600 text-sm">Originals</p>
               </div>
             </div>
           </div>
