@@ -176,6 +176,8 @@ export default function AdidasHero() {
                 opts={{
                   align: "start",
                   loop: false,
+                  dragFree: true,
+                  containScroll: "trimSnaps",
                 }}
                 className="w-full"
               >
