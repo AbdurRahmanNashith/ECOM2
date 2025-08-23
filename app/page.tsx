@@ -238,18 +238,79 @@ export default function AdidasHero() {
           {/* What's Hot Section */}
           <div className="border-t border-gray-200 pt-12 sm:pt-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-8 sm:mb-12 tracking-tight">WHAT'S HOT?</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-              <div className="aspect-square bg-black rounded-lg overflow-hidden">
-                <img src="/urban-adidas-style.png" alt="What's Hot 1" className="w-full h-full object-cover" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2">
+              {/* Y-3 Tennis Card */}
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-3 hover:p-1">
+                <div className="aspect-[4/5] bg-black overflow-hidden mb-4">
+                  <img
+                    src="/urban-adidas-style.png"
+                    alt="Y-3 Tennis"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-bold">Y-3 Tennis</h3>
+                  <p className="text-sm text-gray-600">As worn by Sascha Zverev.</p>
+                  <Button variant="link" className="p-0 h-auto text-black font-medium underline">
+                    Shop Now
+                  </Button>
+                </div>
               </div>
-              <div className="aspect-square bg-gray-200 rounded-lg overflow-hidden">
-                <img src="/adidas-lifestyle.png" alt="What's Hot 2" className="w-full h-full object-cover" />
+
+              {/* Liverpool FC Jersey Card */}
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-3 hover:p-1">
+                <div className="aspect-[4/5] bg-gray-200 overflow-hidden mb-4">
+                  <img
+                    src="/adidas-lifestyle.png"
+                    alt="Liverpool FC Jersey"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-bold">WIN A SIGNED LIVERPOOL FC AWAY JERSEY</h3>
+                  <p className="text-sm text-gray-600">
+                    Stand a chance to own a one-of-a-kind piece of Liverpool FC memorabilia with your adiClub points.
+                  </p>
+                  <Button variant="link" className="p-0 h-auto text-black font-medium underline">
+                    Redeem now
+                  </Button>
+                </div>
               </div>
-              <div className="aspect-square bg-gray-800 rounded-lg overflow-hidden">
-                <img src="/adidas-street-style.png" alt="What's Hot 3" className="w-full h-full object-cover" />
+
+              {/* Explore Beyond Limits Card */}
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-3 hover:p-1">
+                <div className="aspect-[4/5] bg-gray-800 overflow-hidden mb-4">
+                  <img
+                    src="/adidas-street-style.png"
+                    alt="Explore Beyond Limits"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-bold">EXPLORE BEYOND LIMITS</h3>
+                  <p className="text-sm text-gray-600">adidas TERREX | National Geographic</p>
+                  <Button variant="link" className="p-0 h-auto text-black font-medium underline">
+                    SHOP NOW
+                  </Button>
+                </div>
               </div>
-              <div className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
-                <img src="/adidas-lifestyle-portrait.png" alt="What's Hot 4" className="w-full h-full object-cover" />
+
+              {/* Never Out Of Style Card */}
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-3 hover:p-1">
+                <div className="aspect-[4/5] bg-gray-300 overflow-hidden mb-4">
+                  <img
+                    src="/adidas-lifestyle-portrait.png"
+                    alt="Never Out Of Style"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-lg font-bold">Never Out Of Style</h3>
+                  <p className="text-sm text-gray-600">Shop the best of adidas</p>
+                  <Button variant="link" className="p-0 h-auto text-black font-medium underline">
+                    Shop now
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
