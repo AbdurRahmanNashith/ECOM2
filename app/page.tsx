@@ -240,7 +240,7 @@ export default function AdidasHero() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-8 sm:mb-12 tracking-tight">WHAT'S HOT?</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {/* Y-3 Tennis Card */}
-              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-1 hover:p-0">
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-gray-400 p-2 hover:p-0">
                 <div className="aspect-[4/5] bg-black overflow-hidden mb-4">
                   <img
                     src="/urban-adidas-style.png"
@@ -258,7 +258,7 @@ export default function AdidasHero() {
               </div>
 
               {/* Liverpool FC Jersey Card */}
-              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-1 hover:p-0">
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-gray-400 p-2 hover:p-0">
                 <div className="aspect-[4/5] bg-gray-200 overflow-hidden mb-4">
                   <img
                     src="/adidas-lifestyle.png"
@@ -278,7 +278,7 @@ export default function AdidasHero() {
               </div>
 
               {/* Explore Beyond Limits Card */}
-              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-1 hover:p-0">
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-gray-400 p-2 hover:p-0">
                 <div className="aspect-[4/5] bg-gray-800 overflow-hidden mb-4">
                   <img
                     src="/adidas-street-style.png"
@@ -296,7 +296,7 @@ export default function AdidasHero() {
               </div>
 
               {/* Never Out Of Style Card */}
-              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-1 hover:p-0">
+              <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-gray-400 p-2 hover:p-0">
                 <div className="aspect-[4/5] bg-gray-300 overflow-hidden mb-4">
                   <img
                     src="/adidas-lifestyle-portrait.png"
