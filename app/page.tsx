@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import Header from "@/components/header"
 import { Heart } from "lucide-react"
 
@@ -180,10 +180,10 @@ export default function AdidasHero() {
                 className="w-full"
               >
                 <CarouselContent className="gap-4">
-                  {products.slice(0, 4).map((product, index) => (
+                  {products.map((product) => (
                     <CarouselItem key={product.id} className="basis-1/4 min-w-0">
                       <div
-                        className={`group cursor-pointer ${index === 1 ? "border-2 border-black" : ""}`}
+                        className="group cursor-pointer"
                         onClick={() => console.log(`Clicked product ${product.id}`)}
                       >
                         <div className="relative bg-gray-100 overflow-hidden mb-4 transition-all duration-200 hover:border hover:border-black aspect-[4/5]">
@@ -205,6 +205,7 @@ export default function AdidasHero() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
+                <CarouselPrevious className="absolute -left-4 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 w-12 h-12" />
                 <CarouselNext className="absolute -right-4 top-1/2 -translate-y-1/2 bg-white border border-gray-300 shadow-sm hover:bg-gray-50 w-12 h-12" />
               </Carousel>
             </div>
