@@ -238,7 +238,7 @@ export default function AdidasHero() {
           {/* What's Hot Section */}
           <div className="border-t border-gray-200 pt-12 sm:pt-16">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-8 sm:mb-12 tracking-tight">WHAT'S HOT?</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 sm:gap-2">
               {/* Y-3 Tennis Card */}
               <div className="group cursor-pointer transition-all duration-300 hover:border-2 hover:border-black p-3 hover:p-1">
                 <div className="aspect-[4/5] bg-black overflow-hidden mb-4">
